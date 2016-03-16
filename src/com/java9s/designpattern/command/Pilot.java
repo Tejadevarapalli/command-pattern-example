@@ -12,11 +12,6 @@ import javax.swing.JOptionPane;
  */
 public class Pilot {
 	private Cockpit cockpit;
-	
-	public Pilot(Cockpit cockpit){
-		this.cockpit = cockpit;
-	}
-
 	private String[ ] commands = {
 			Cockpit.TAKE_OFF,
 			Cockpit.LAND,
@@ -28,6 +23,10 @@ public class Pilot {
 			EngineControls.SPEED_UP,
 			Cockpit.EXIT
 	};
+	
+	public Pilot(Cockpit cockpit){
+		this.cockpit = cockpit;
+	}
 	
 	public void fly(){
 		do{
