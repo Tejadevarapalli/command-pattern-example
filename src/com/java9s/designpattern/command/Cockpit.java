@@ -46,28 +46,6 @@ public class Cockpit implements CommandController{
 		}
 	}
 
-	
-	public void takeOff(){
-		System.out.println("Fligh Take Off operations---------");
-		this.execute(EngineControls.SPEED_UP);
-		this.execute(WingControls.MOVE_UP);
-		System.out.println("---------");
-	}
-	
-	public void reachAltitudeAndFly(){
-		System.out.println("Flying at an altitue---------");
-		this.execute(EngineControls.SPEED_UP);
-		this.execute(WingControls.KEEP_FLAT);
-		System.out.println("---------");
-	}
-	
-	public void land(){
-		System.out.println("Landing the Flight----------");
-		this.execute(EngineControls.SLOW_DOWN);
-		this.execute(WingControls.MOVE_DOWN);
-		System.out.println("---------");
-	}
-
 
 	@Override
 	public boolean canHandle(String command) {
@@ -78,5 +56,28 @@ public class Cockpit implements CommandController{
 		return false;
 	}
 	
+
+	
+	private void takeOff(){
+		System.out.println("Fligh Take Off operations---------");
+		this.execute(EngineControls.SPEED_UP);
+		this.execute(WingControls.MOVE_UP);
+		System.out.println("---------");
+	}
+	
+	private void reachAltitudeAndFly(){
+		System.out.println("Flying at an altitue---------");
+		this.execute(EngineControls.SPEED_UP);
+		this.execute(WingControls.KEEP_FLAT);
+		System.out.println("---------");
+	}
+	
+	private void land(){
+		System.out.println("Landing the Flight----------");
+		this.execute(EngineControls.SLOW_DOWN);
+		this.execute(WingControls.MOVE_DOWN);
+		System.out.println("---------");
+	}
+
 	
 }
