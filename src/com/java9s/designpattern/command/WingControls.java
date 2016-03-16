@@ -49,8 +49,6 @@ public class WingControls implements CommandController{
 				command.equals(TURN_RIGHT)){
 			return true;
 		}
-		
-			
 		return false;
 	}
 	
